@@ -12,7 +12,7 @@ build-docker:
 .PHONY: tag
 tag: build-docker
 	docker tag daxxog/krikzz-pub-archive:latest daxxog/krikzz-pub-archive:$$(date '+%Y').$$(cat BUILD_NUMBER)
-	@docker tag daxxog/krikzz-pub-archive:latest daxxog/krikzz-pub-archive:$$(date '+%Y').$$(cat BUILD_NUMBER)
+	@echo docker tag daxxog/krikzz-pub-archive:latest daxxog/krikzz-pub-archive:$$(date '+%Y').$$(cat BUILD_NUMBER)
 
 
 .PHONY: release
