@@ -24,7 +24,7 @@ release: bump-build-number
 	git commit -m "built krikzz-pub-archive@$$(date '+%Y').$$(cat BUILD_NUMBER)"
 	git push
 	git tag -a "$$(date '+%Y').$$(cat BUILD_NUMBER)" -m "tagging version $$(date '+%Y').$$(cat BUILD_NUMBER)"
-	git push origin $$(cat BUILD_NUMBER)
+	git push origin "$$(date '+%Y').$$(cat BUILD_NUMBER)"
 
 
 .PHONY: bump-build-number
