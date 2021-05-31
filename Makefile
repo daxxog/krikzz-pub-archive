@@ -21,9 +21,9 @@ release: bump-build-number
 	docker push daxxog/krikzz-pub-archive:latest
 	docker push daxxog/krikzz-pub-archive:$$(date '+%Y').$$(cat BUILD_NUMBER)
 	git add BUILD_NUMBER
-	git commit -m "built krikzz-pub-archive@$$(cat BUILD_NUMBER)"
+	git commit -m "built krikzz-pub-archive@$$(date '+%Y').$$(cat BUILD_NUMBER)"
 	git push
-	git tag -a "$$(cat BUILD_NUMBER)" -m "tagging version $$(cat BUILD_NUMBER)"
+	git tag -a "$$(date '+%Y').$$(cat BUILD_NUMBER)" -m "tagging version $$(date '+%Y').$$(cat BUILD_NUMBER)"
 	git push origin $$(cat BUILD_NUMBER)
 
 
